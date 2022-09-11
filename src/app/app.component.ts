@@ -18,7 +18,7 @@ export class AppComponent {
   }
 
   onCreateServer() {
-    this.serverCreationStatus = 'Server is created!';
+    this.serverCreationStatus = 'Server is created! Name is ' + this.serverName;
   }
 
   onUpdateServerName(event: any) {
