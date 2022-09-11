@@ -9,7 +9,7 @@ export class AppComponent {
   title = 'Angular-Udemy';
   allowNewServer = false;
   serverCreationStatus = 'No server was created!';
-  serverName = '';
+  serverName = 'Test server';
 
   constructor() {
     setTimeout(() => {
