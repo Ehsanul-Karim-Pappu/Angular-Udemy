@@ -10,6 +10,7 @@ export class AppComponent {
   allowNewServer = false;
   serverCreationStatus = 'No server was created!';
   serverName = 'Test server';
+  userName = null;
 
   constructor() {
     setTimeout(() => {
@@ -22,8 +23,8 @@ export class AppComponent {
   }
 
   onUpdateServerName(event: any) {
-    console.log(event)
-    console.log(event.target.value)
+    // console.log(event)
+    // console.log(event.target.value)
     this.serverName = event.target.value;
   }
 

@@ -15,3 +15,17 @@
 
 <p>{{ serverCreationStatus }}</p>
 <app-server></app-server>
+
+<hr>
+<hr>
+
+<h3>Username</h3>
+<input
+  type="text"
+  class="form-control"
+  [(ngModel)]="userName">
+<p>{{ userName }}</p>
+<button
+  class="btn btn-primary"
+  [disabled]="!userName"
+  (click)="userName = null">Reset Username</button>
