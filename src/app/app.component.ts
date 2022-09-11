@@ -8,10 +8,15 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Angular-Udemy';
   allowNewServer = false;
+  serverCreationStatus = 'No server was created!';
 
   constructor() {
     setTimeout(() => {
       this.allowNewServer = true;
     }, 3000)
+  }
+
+  onCreateServer() {
+    this.serverCreationStatus = 'Server is created!';
   }
 }
