@@ -9,6 +9,7 @@ export class AppComponent {
   title = 'Angular-Udemy';
   allowNewServer = false;
   serverCreationStatus = 'No server was created!';
+  serverName = '';
 
   constructor() {
     setTimeout(() => {
@@ -19,4 +20,11 @@ export class AppComponent {
   onCreateServer() {
     this.serverCreationStatus = 'Server is created!';
   }
+
+  onUpdateServerName(event: any) {
+    console.log(event)
+    console.log(event.target.value)
+    this.serverName = event.target.value;
+  }
+
 }
