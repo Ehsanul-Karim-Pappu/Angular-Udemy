@@ -13,6 +13,8 @@ export class AppComponent {
   userName = '';
   serverCreated = false;
   servers = ['Testserver 1', 'Testserver 2'];
+  isClickedDisplayButton = false;
+  log : any = [];
 
   constructor() {
     setTimeout(() => {
@@ -32,4 +34,8 @@ export class AppComponent {
     this.serverName = event.target.value;
   }
 
+  onDisplayBtnClick() {
+    this.isClickedDisplayButton = !this.isClickedDisplayButton;
+    this.log.push(new Date());
+  }
 }
