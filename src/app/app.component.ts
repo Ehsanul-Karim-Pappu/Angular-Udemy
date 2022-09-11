@@ -10,7 +10,7 @@ export class AppComponent {
   allowNewServer = false;
   serverCreationStatus = 'No server was created!';
   serverName = 'Test server';
-  userName = null;
+  userName = '';
 
   constructor() {
     setTimeout(() => {
