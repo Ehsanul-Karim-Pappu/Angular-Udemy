@@ -47,12 +47,12 @@
         *ngIf="isClickedDisplayButton">
         Secret Password = tuna
       </p>
-      <div
+      <p
         *ngFor="let logItem of log; let i = index"
         [ngStyle]="{backgroundColor : i >= 4 ? 'blue' : 'white'}"
         [ngClass]="{'text-white' : i >= 4}">
         {{ logItem }}
-      </div>
+      </p>
     </div>
   </div>
 </div>
