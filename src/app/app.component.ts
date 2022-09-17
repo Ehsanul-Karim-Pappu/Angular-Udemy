@@ -17,7 +17,11 @@ export class AppComponent {
   log : any = [];
 
   // section 5
-  serverElements: any = [];
+  serverElements: {type: string, name: string, content: string}[] = [{
+    type: 'server',
+    name: 'Testserver',
+    content: 'Just a test'
+  }];
 
 
   constructor() {
