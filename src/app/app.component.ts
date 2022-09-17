@@ -16,6 +16,11 @@ export class AppComponent {
   isClickedDisplayButton = false;
   log : any = [];
 
+  // section 5
+  serverElements: any = [];
+  newServerName = '';
+  newServerContent = '';
+
   constructor() {
     setTimeout(() => {
       this.allowNewServer = true;
@@ -37,5 +42,22 @@ export class AppComponent {
   onDisplayBtnClick() {
     this.isClickedDisplayButton = !this.isClickedDisplayButton;
     this.log.push(new Date());
+  }
+
+  // section 5
+  onAddServer() {
+    this.serverElements.push({
+      type: 'server',
+      name: this.newServerName,
+      content: this.newServerContent
+    });
+  }
+
+  onAddBlueprint() {
+    this.serverElements.push({
+      type: 'blueprint',
+      name: this.newServerName,
+      content: this.newServerContent
+    });
   }
 }
