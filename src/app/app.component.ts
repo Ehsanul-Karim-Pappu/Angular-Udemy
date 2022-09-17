@@ -16,13 +16,6 @@ export class AppComponent {
   isClickedDisplayButton = false;
   log : any = [];
 
-  // section 5
-  serverElements: {type: string, name: string, content: string}[] = [{
-    type: 'server',
-    name: 'Testserver',
-    content: 'Just a test'
-  }];
-
 
   constructor() {
     setTimeout(() => {
@@ -48,5 +41,24 @@ export class AppComponent {
   }
 
   // section 5
+  serverElements: {type: string, name: string, content: string}[] = [{
+    type: 'server',
+    name: 'Testserver',
+    content: 'Just a test'
+  }];
+  onServerAdded($event: { serverName: string; serverContent: string }) {
+    this.serverElements.push({
+      type: 'server',
+      name: $event.serverName,
+      content: $event.serverContent
+    });
+  }
 
+  onBlueprintAdded($event: { serverName: string; serverContent: string }) {
+    this.serverElements.push({
+      type: 'blueprint',
+      name: $event.serverName,
+      content: $event.serverContent
+    });
+  }
 }
