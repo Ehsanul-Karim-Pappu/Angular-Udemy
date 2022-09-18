@@ -13,11 +13,9 @@ export class CockpitComponent implements OnInit {
   @ViewChild(
     'serverContentInput',
     {read: ElementRef, static: false})
-  serverContentInput: {
+  serverContentInput!: {
     nativeElement: { value: string }
-  } = {
-    nativeElement: { value: '' }
-  };
+  }
 
   constructor() { }
 
