@@ -58,6 +58,8 @@
 
   <hr>
 
+
+<!--  section 5-->
   <app-cockpit
   (serverCreated)="onServerAdded($event)"
   (blueprintCreated)="onBlueprintAdded($event)"></app-cockpit>
@@ -72,6 +74,29 @@
           <em *ngIf="serverElement.type === 'blueprint'">{{ serverElement.content }}</em>
         </p>
       </app-server-element>
+    </div>
+  </div>
+
+  <hr>
+
+
+<!--  section 5 Assignment-->
+  <div class="row">
+    <div class="col-xs-12">
+      <app-game-control
+      (intervalFired)="onEventFired($event)"
+      (clearNumArray)="numArray = []"></app-game-control>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <app-odd
+        *ngFor="let i of numArray"
+        [num] = "i"></app-odd>
+      <app-even
+        *ngFor="let i of numArray"
+        [num] = "i"></app-even>
     </div>
   </div>
 </div>

@@ -61,4 +61,12 @@ export class AppComponent {
       content: $event.serverContent
     });
   }
+
+
+  // section 5 Assignment
+  numArray: number[] = [];
+  onEventFired($event: number) {
+    this.numArray.push($event);
+  }
+
 }
