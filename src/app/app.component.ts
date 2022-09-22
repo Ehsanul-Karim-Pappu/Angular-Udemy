@@ -69,4 +69,9 @@ export class AppComponent {
     this.numArray.push($event);
   }
 
+
+  // section 7
+  numbers = [1, 2, 3, 4, 5];
+  onlyOdd = false;
+
 }
