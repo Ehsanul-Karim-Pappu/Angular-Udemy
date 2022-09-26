@@ -122,6 +122,13 @@
             [ngStyle]="{'background-color': onlyOdd? '#00bb9f': '#ffbb9f'}"
             class="list-group-item mb-2"> {{ i }}
           </li>
+          <ng-template [ngIf]="i % 2 === 1 && onlyOdd">
+            <li
+              [ngClass]="{odd: onlyOdd}"
+              [ngStyle]="{'background-color': onlyOdd? '#00bb9f': '#ffbb9f'}"
+              class="list-group-item mb-2"> {{ i }}
+            </li>
+          </ng-template>
         </ul>
       </div>
       <p appBasicHighlight>Style me with basic Directive!</p>
