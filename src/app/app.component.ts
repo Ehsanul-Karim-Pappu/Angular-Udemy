@@ -1,11 +1,13 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {AccountsService} from "./accounts.service";
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  providers: [AccountsService]
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'Angular-Udemy';
   allowNewServer = false;
   serverCreationStatus = 'No server was created!';
@@ -17,7 +19,7 @@ export class AppComponent {
   log : any = [];
 
 
-  constructor() {
+  constructor(private accountsService: AccountsService) {
     setTimeout(() => {
       this.allowNewServer = true;
     }, 3000)
@@ -76,27 +78,10 @@ export class AppComponent {
   value = 10;
 
   // section 9
-  accounts = [
-    {
-      name: 'Master Account',
-      status: 'active'
-    },
-    {
-      name: 'Testaccount',
-      status: 'inactive'
-    },
-    {
-      name: 'Hidden Account',
-      status: 'unknown'
-    }
-  ];
+  accounts: {name: string, status: string} [] = [];
 
-  onAccountAdded(newAccount: {name: string, status: string}) {
-    this.accounts.push(newAccount);
-  }
-
-  onStatusChanged(updateInfo: {id: number, newStatus: string}) {
-    this.accounts[updateInfo.id].status = updateInfo.newStatus;
+  ngOnInit() {
+    this.accounts = this.accountsService.accounts;
   }
 
 }
