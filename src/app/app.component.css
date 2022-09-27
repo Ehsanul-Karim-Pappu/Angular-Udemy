@@ -5,3 +5,11 @@
 p {
   color: blue;
 }
+
+.odd {
+  color: red;
+}
+
+.even {
+  color: blue;
+}

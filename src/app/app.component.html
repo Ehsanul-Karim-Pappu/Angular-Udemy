@@ -117,7 +117,7 @@
             class="list-group-item mb-2"> {{ i }}
           </li>
           <li
-            *appUnless = "onlyOdd"
+            *appUnless = "i % 2 === 1 && onlyOdd"
             [ngClass]="{odd: onlyOdd}"
             [ngStyle]="{'background-color': onlyOdd? '#00bb9f': '#ffbb9f'}"
             class="list-group-item mb-2"> {{ i }}
