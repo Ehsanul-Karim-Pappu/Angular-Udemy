@@ -18,6 +18,7 @@ import { AccountComponent } from './account/account.component';
 import { NewAccountComponent } from './new-account/new-account.component';
 import { ActiveUsersComponent } from './active-users/active-users.component';
 import { InactiveUsersComponent } from './inactive-users/inactive-users.component';
+import { CountTransitionComponent } from './count-transition/count-transition.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { InactiveUsersComponent } from './inactive-users/inactive-users.componen
     AccountComponent,
     NewAccountComponent,
     ActiveUsersComponent,
-    InactiveUsersComponent
+    InactiveUsersComponent,
+    CountTransitionComponent
   ],
   imports: [
     BrowserModule,
